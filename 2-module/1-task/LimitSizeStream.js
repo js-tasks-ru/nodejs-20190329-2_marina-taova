@@ -30,9 +30,7 @@ const outStream = fs.createWriteStream('out.txt');
 
 limitedStream.pipe(outStream);
 
-limitedStream.on('error', (er) => {
-  console.error(er);
-});
+limitedStream.on('error', (er) => {});
 
 limitedStream.write('hello');
 limitedStream.write('world');
