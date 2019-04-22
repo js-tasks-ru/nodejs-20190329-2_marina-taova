@@ -24,15 +24,4 @@ class LimitSizeStream extends stream.Transform {
   }
 }
 
-const limitedStream = new LimitSizeStream({ limit: 8 });
-const outStream = fs.createWriteStream('out.txt');
-
-
-limitedStream.pipe(outStream);
-
-limitedStream.on('error', (er) => {});
-
-limitedStream.write('hello');
-limitedStream.write('world');
-
 module.exports = LimitSizeStream;
