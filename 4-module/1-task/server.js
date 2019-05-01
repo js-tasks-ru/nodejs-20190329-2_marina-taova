@@ -12,7 +12,6 @@ server.on('request', (req, res) => {
 
   switch (req.method) {
     case 'GET':
-
       if (~pathname.search('/')) {
         res.statusCode = 400;
         res.end('400');
